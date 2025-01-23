@@ -69,4 +69,10 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/aquestry/nebulaapi</url>
+        </repository>
+    </distributionManagement>
 </project>
