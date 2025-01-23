@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>de.voasis</groupId>
     <artifactId>NebulaAPI</artifactId>
-    <version>0.1</version>
+    <version>0.1-SNAPSHOT</version>
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
