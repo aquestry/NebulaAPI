@@ -1,7 +1,10 @@
 name: Build and Publish Maven Package
-on: push
+on:
+  push:
+    branches:
+      - main
 jobs:
-  Build:
+  build-and-publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -17,5 +20,14 @@ jobs:
           server-id: github
           server-username: ${{ github.actor }}
           server-password: ${{ secrets.JAVA_TOKEN }}
+      - name: Cache Maven Dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven
+      - name: Clean Build
+        run: mvn clean
       - name: Build and Deploy with Maven
-        run: mvn deploy -DskipTests
+        run: mvn deploy -DskipTests -X
