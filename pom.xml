@@ -1,11 +1,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>de.voasis</groupId>
+    <groupId>com.github.aquestry</groupId>
     <artifactId>NebulaAPI</artifactId>
     <version>2.1.5</version>
+    <name>NebulaAPI</name>
+    <description>A simple API for Nebula projects.</description>
+    <url>https://github.com/aquestry/NebulaAPI</url>
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://github.com/aquestry/NebulaAPI</url>
+        <connection>scm:git:git://github.com/aquestry/NebulaAPI.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com:aquestry/NebulaAPI.git</developerConnection>
+    </scm>
+    <developers>
+        <developer>
+            <id>aquestry</id>
+            <name>Aquestry</name>
+        </developer>
+    </developers>
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
@@ -40,10 +59,4 @@
             </plugin>
         </plugins>
     </build>
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/aquestry/NebulaAPI</url>
-        </repository>
-    </distributionManagement>
 </project>
